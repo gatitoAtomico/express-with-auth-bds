@@ -13,7 +13,7 @@ const mysqlService = {
     });
   },
   test: async () => {
-    return connection.query("SELECT * FROM `test`");
+    return connection.query("SELECT * FROM `users`");
   },
 };
 
