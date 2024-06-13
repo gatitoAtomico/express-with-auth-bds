@@ -6,6 +6,8 @@ import express, {
   RequestHandler,
   ErrorRequestHandler,
 } from "express";
+import path from "path";
+import folderRouter from "./folderRouter";
 
 interface AdvancedServerSettings {
   port: number;
@@ -30,6 +32,14 @@ class AdvnacedServer {
 
   getApp = () => {
     return this._app;
+  };
+
+  folderRouter = async (folder: string = "routes") => {
+    console.log(`-- Start loading Routes  --`);
+    console.log(path.join(require.main?.path || ""));
+    //function
+
+    // return this;
   };
 }
 
